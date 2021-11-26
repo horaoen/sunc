@@ -1,27 +1,22 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Hello from "./Hello";
-interface IThemeProps {
-  [key: string]: { color: string; background: string };
-}
-
-const themes: IThemeProps = {
-  light: {
-    color: "#000",
-    background: "#eee",
-  },
-  dark: {
-    color: "#fff",
-    background: "#222",
-  },
-};
-
-export const ThemeContext = React.createContext(themes.light);
+import Button, { ButtonType, ButtonSize } from "components/Button/button";
+import React from "react";
 
 const App: React.FC = () => {
-  const [show, setShow] = useState(true);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Button disabled>hello</Button>
+      <Button
+        btnType={ButtonType.Primary}
+        size={ButtonSize.Large}
+        disabled={true}
+      >
+        hello large
+      </Button>
+      <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>
+        baidu
+      </Button>
+    </div>
+  );
 };
 
 export default App;

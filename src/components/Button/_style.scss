@@ -1,0 +1,12 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  font-weight: $bth-font-weight;
+  line-height: $bth-line-height;
+  color: $body-color;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: $bth-border-width solid transparent;
+}
